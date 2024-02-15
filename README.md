@@ -1,73 +1,83 @@
-<!DOCTYPE html>
+const heart = new mojs.Shape({
 
-<html lang="en">
+shape: 'heart',
 
-<head>
+fill: 'none',
 
-cneta charset="UTF-8">
+stroke: 'white',
 
-<title>Quieres ser mi novia</title>
+scale: {0: 3},
 
-cneta name="viewport" content=
+strokeWidth: { 50: 0 },
 
-"width=device-width, user-scalablesno, initial-scale 1.0, maximum-scale=1.0, minimum-scale-1.0"
+y: 25,
 
-<link rel="stylesheet" href="main.css">
+duration: 1000,
 
-<script src
+delay: delay_2
 
-"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/ Jquery.min.js"
+}).then({
 
-/script>
+shape: 'heart',
 
-<script>
+stroke: 'white',
 
-$(document).ready(function(){
+scale: 0,
 
-$(p1).hover(function(){
+strokeWidth: 50,
 
-arriba Math.random()*(400-1) +1;
+duration: 200
 
-abajo Math.random() (609-1) +1; $(this).css('top', arriba); $(this).css('left', abajo); ));
+}).then({
+
+shape: 'heart',
+
+fill: 'red',
+
+stroke: 'none',
+
+scale: 2,
+
+strokeWidth: 0,
+
+duration: 600
 
 });
 
-function dijosi(){
+const crazy = new mojs.Burst({
 
-document.getElementById('si').style.display
+radius: { 10: 1000 },
 
-'block;
+count: 10,
 
-</script>
+children: {
 
-</head>
+shape: 'circle',
 
-<body>
+delay: delay_2,
 
-<div class="contenedor">
+duration: 2500
 
-<div class="titulo">
+} });
 
-ChQuieres ser mi novia/h1>
+const timeline = new mojs.Timeline({
 
-</div>
+onComplete: function () {
 
-<div class="opciones">
+window.location.href = 'Valentine.html';
 
-<p class="pi" Noc/p>
+}
 
-onclick "dijosi()" class="p2">51</p>
+});
 
-<div id="si
+timeline.add(ring1, ring2, ring3, ring4, firstExplosion, firstExplosionBG);
 
-<h2>Sabria que querrias mylove/h2>
+timeline.add(crazy, rect, heart);
 
-</div>
+timeline.play();
 
-</div>
+const loveElement= document.getElementById('love'); loveElement.addEventListener('click', function () {
 
-</body>
+window.location.href = 'Valentine.html';
 
-/htels
-
-</div>
+});
